@@ -60,7 +60,7 @@ Having verified the structure of the data we proceed to visualise it in the form
 ge
 ```
 
-Figire 1 reveals possible direct proportional relationship between dose level and odontoblasts length for both delivery methods with clearer advantage of OJ for dose levels of 0.5 mg and 1 mg and less clear for 2 mg dose. Furthermore, it seems that there could be no benefit of increasing the dose beyond 1 mg for OJ delivery method.
+Figure 1 reveals possible direct proportional relationship between dose level and odontoblasts length for both delivery methods with clearer advantage of OJ for dose levels of 0.5 mg and 1 mg and less clear for 2 mg dose. Furthermore, it seems that there could be no benefit of increasing the dose beyond 1 mg for OJ delivery method.
 
 Both medians and means appear to follow the same relationship to dose and method. From that figure we can also appreciate the approximate distribution of odontoblasts lenght data for each case and the fact of having outliers for two combinations of dose/delivery, marked with red dots.
 
