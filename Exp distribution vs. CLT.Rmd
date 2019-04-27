@@ -2,7 +2,9 @@
 title: "Averages of exponential distribution vs. CLT"
 author: "Mariusz Musiał"
 date: "21 listopada 2015"
-output: pdf_document
+output:
+  html_document:
+    df_print: paged
 graphics: yes
 ---
 
@@ -70,7 +72,7 @@ The Theoretical Variance value is:
 
 $\dfrac{\sigma^2}{n} = `r s2`$
 
-The variance of the sample distribution is quite close to the Theoretical Variance value, but with the relative error of $\dfrac{Var(\bar X) - \sigma^2/n}{\sigma^2/n} * 100\%$ = `r round((mvar-s2)/s2,2)*100`% we see a bigger deviation than in case of Sample Mean. We attribute this error to the relatively small sample size (40 samples). We also hipothesize, that sample mean converges faster to $\mu$ than sample mean variance to $\frac{\sigma^2}{n}$ for the given increase of n.
+The variance of the sample distribution is quite close to the Theoretical Variance value, but with the relative error of $\dfrac{Var(\bar X) - \sigma^2/n}{\sigma^2/n} * 100\%$ = `r round((mvar-s2)/s2,2)*100`% we see a bigger deviation than in case of Sample Mean. We attribute this error to the relatively small sample size (40 samples). We also hypothesize, that sample mean converges faster to $\mu$ than sample mean variance to $\frac{\sigma^2}{n}$ for the given increase of n.
 
 # Distribution
 
@@ -132,7 +134,7 @@ s2
 f <- f + 1 # for numering the figures, initialized in hidden code chunk
 gg <- ggplot(df, aes(x = means, fill = as.factor(1)))
 gg <- gg + geom_histogram(binwidth = .2, aes(y = ..density..), color = "black")
-gg <- gg + stat_function(fun = dnorm, arg = list(mean = mu, sd = sigma/sqrt(n)), size = 1,
+gg <- gg + stat_function(fun = dnorm, args = list(mean = mu, sd = sigma/sqrt(n)), size = 1,
                          color = "red")
 gg <- gg + geom_vline(xintercept = mu, color = "blue")
 gg <- gg + ggtitle(paste("Fig. ", f,
